@@ -28,6 +28,7 @@ pipeline {
                         dir("terraform")
                         {
                             sh("""
+                                rm -rf jenkinsec2
                                 git clone "https://github.com/vineeth394/jenkinsec2.git"
                              """)
                         }
