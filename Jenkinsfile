@@ -34,6 +34,13 @@ pipeline {
                     }
                 }
             }
+        stage('Initialize Terraform') {
+            steps {
+                script {
+                    sh 'terraform init -reconfigure'
+                }
+            }
+        }
 
         stage('Plan') {
             when {
